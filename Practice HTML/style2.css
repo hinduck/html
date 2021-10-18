@@ -1,0 +1,92 @@
+html, body {
+  font-family: 'Fira Code', cursive;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+}
+
+header a {
+  color: white;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container .logo a {
+  logo: 24px;
+}
+
+header .container nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container nav > ul > li {
+  margin-left: 20px;
+  position: relative;
+  padding: 10px 0px;
+}
+
+header .container nav > ul > li:hover ul.dropdown {
+  display: block;
+}
+
+header .container nav > ul > li ul.dropdown {
+  display: none;
+  position: absolute;
+  left: -50px;
+  top: 35px;
+  background-color: #333;
+  border: 2px solid goldenrod;
+  width: 148px;
+}
+
+header .container nav > ul > li ul.dropdown::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #333;
+  border-left: 10px solid transparent;
+}
+
+header .container nav > ul > li ul.dropdown::before {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+  border-top: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-bottom: 13px solid goldenrod;
+  border-left: 13px solid transparent;
+}
+
+header .container nav > ul > li ul.dropdown li {
+  padding: 10px 15px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=style2.css.map */

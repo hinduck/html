@@ -1,0 +1,273 @@
+/* .square {
+  height: 400px;
+  width: 400px;
+  background-color: red;
+  position: relative;
+  //   position: absolute;
+  // top, left, right, bottom,
+  /* left: 20px;
+  top: 50px; */
+  /* .square1 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(14, 110, 51);
+    position: absolute; */
+    // top, left, right, bottom
+    /* .circle {
+      // hình tròn = hình vuông + border-radius: 50%
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: rgb(78, 78, 238);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    } */
+    /* .square2 {
+      width: 20px;
+      height: 20px;
+      background-color: black;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .square3 {
+      width: 10px;
+      height: 10px;
+      background-color: gold;
+    }
+  }
+  .square2 {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  } */
+/* } */
+
+// position: absolute; tách 1 phần tử, kiểm tra cha gần nhất có thuộc tính position và sẽ phụ thuộc vào nó
+/* h1 {
+  transition: 0.5s; color 0.5s, background-color 1s; 
+} */
+
+/* h1:hover {
+  color: red;
+  background-color: violet;
+} */
+/* header {
+  background-color: #333;
+  a {
+    color: white;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  .logo {
+    a {
+      font-size: 24px;
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      li {
+        color: white;
+        margin-left: 20px;
+        a {
+          font-size: 18px;
+          transition: all 0.3s;
+          &:hover {
+            color: #1ed760;
+        }
+        }
+      }
+    }
+  }
+}
+.banner {
+  height: 500px;
+  background-image: url(../fe-template/images/thiennhien.jpg) no-repeat top center/cover;
+} */
+/* .square {
+  // transform: translate(-20px, 200px);
+  width: 50px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 300px;
+  transition: 1s;
+  &:hover{
+    // transform: scale(3); // 1 = 100%
+    // transform: translateX(100px);
+    transform: rotate(360deg);
+  // scaleX, scaleY
+  // rotateX, rotateY 
+  }
+} */
+/* .mp3 {
+  margin: 200px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  &:hover img {
+    // transform: rotate(360deg);
+    // transform: scale(1.5) rotate(360deg);
+    transform: skew(180deg);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: 5s;
+  }
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 30px;
+    color:aquamarine;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+  }
+  .blur {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(#333, 0.5);
+    position: absolute;
+    top: 0;
+  }
+} */
+ html, body {
+  font-family: 'Fira Code', cursive;
+  // font-weight: 300;
+}
+/*a {
+  i {
+    color: red;
+  }
+} */
+
+ /*  &:after {
+    content: "---";
+    margin-left: 5px;
+  }
+  &:before {
+    content :"***";
+    margin-right: 5px;
+  } */
+/*   border-bottom: 3px solid #333; */
+  /* display: inline-block;
+  &:hover {
+    &::after{
+      width: 100%;
+    }
+  }
+  &::after {
+    content: '';
+    width: 0;
+    height: 5px;
+    background-color: red;
+    display: block;
+    transition: 0.5s;
+  }
+} */
+
+// after, before: tạo thẻ con ảo
+/* h1::after {
+  content: "***";
+}
+h1::before {
+  content: "---";
+} */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 20px;
+  a {
+    color: white;
+  }
+  .logo {
+    a {
+      font-size: 24px;
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      li {
+        margin-left: 20px;
+        position: relative;
+        &:hover {
+          &::after {
+            // width: 100%;
+            transform: scaleX(1);
+          }
+        }
+        &::after {
+          content: ' ';
+          // width: 0; 
+          width: 100%;
+          height: 3px;
+          background-color: aqua;
+          display: block; // <=> left 0; bottom 0;
+          transition: 0.5s;
+          position: absolute;
+          // right: 0;
+          transform: scaleX(0);
+        }
+        a {
+          i {
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  height: 500px;
+  position: relative;
+  background: url(../fe-template/images/thiennhien.jpg) no-repeat top center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(#333, 0.3);
+  }
+  h2 {
+    color: white;
+    z-index: 1;
+/*     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px; */
+  }
+  /* 
+  &::before {
+  content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(#333, 0.3);
+  }
+  */
+}

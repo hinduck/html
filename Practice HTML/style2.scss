@@ -1,0 +1,87 @@
+@charset "UTF-8";
+html, body {
+    font-family: 'Fira Code', cursive;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    a {
+        color: white;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            a {
+                logo: 24px;
+            }
+        }
+        nav {
+            > ul {
+                display: flex;
+                > li {
+                    margin-left: 20px;
+                    position: relative;
+                    padding: 10px 0px;
+                    &:hover ul.dropdown{
+                        display: block;
+                    }
+                    ul.dropdown {
+                        &::after {
+                            content: " ";
+                            // width: 10px;
+                            // height: 10px;
+                            // border-top: 2px solid goldenrod;
+                            // border-left: 2px solid goldenrod;
+                            // background-color: goldenrod;
+                            position: absolute;
+                            bottom: 100%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            z-index: 2;
+                            border-top: 10px solid transparent;
+                            border-right: 10px solid transparent;
+                            border-bottom: 10px solid #333;
+                            border-left: 10px solid transparent;
+                        }
+                        &::before {
+                            content: " ";
+                            // width: 10px;
+                            // height: 10px;
+                            // border-top: 2px solid goldenrod;
+                            // border-left: 2px solid goldenrod;
+                            // background-color: goldenrod;
+                            position: absolute;
+                            bottom: 100%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            z-index: 2;
+                            border-top: 13px solid transparent;
+                            border-right: 13px solid transparent;
+                            border-bottom: 13px solid goldenrod;
+                            border-left: 13px solid transparent;
+                        }
+                        display: none;
+                        position: absolute;
+                        left: -50px;
+                        top: 35px;
+                        background-color: #333;
+                        border: 2px solid goldenrod;
+                        width: 148px;
+                        li {
+                            padding: 10px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container {
+    // width: chiều dài tuyệt đối
+    max-width: 1100px;
+    margin: 0 auto;
+}
